@@ -32,15 +32,13 @@
 #include <memory>
 #include <thread>
 #include <vector>
+#include <signal.h>
 #include <string>
 #include <unordered_set>
 
-#include <fcntl.h>
+#if !defined(_WIN32)
 #include <pthread.h>
-#include <unistd.h>
-#include <signal.h>
-#include <spawn.h>
-#include <sys/wait.h>
+#endif
 
 using namespace llbuild;
 using namespace llbuild::basic;

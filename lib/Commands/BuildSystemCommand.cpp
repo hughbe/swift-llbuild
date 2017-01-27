@@ -32,7 +32,6 @@
 #include <thread>
 
 #include <signal.h>
-#include <unistd.h>
 
 using namespace llbuild;
 using namespace llbuild::commands;

@@ -45,8 +45,6 @@
 
 #include <memory>
 
-#include <unistd.h>
-
 using namespace llbuild;
 using namespace llbuild::basic;
 using namespace llbuild::core;

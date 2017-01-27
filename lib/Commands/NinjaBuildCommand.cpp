@@ -39,16 +39,10 @@
 #include <cstdlib>
 #include <deque>
 #include <mutex>
+#include <signal.h>
 #include <sstream>
 #include <thread>
 #include <unordered_set>
-
-#include <fcntl.h>
-#include <signal.h>
-#include <spawn.h>
-#include <unistd.h>
-#include <sys/stat.h>
-#include <sys/wait.h>
 
 using namespace llbuild;
 using namespace llbuild::basic;
