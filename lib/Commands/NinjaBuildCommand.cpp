@@ -2027,7 +2027,7 @@ int commands::executeNinjaBuildCommand(std::vector<std::string> args) {
       // twice.
       command::InterruptSignalAwaiter::resetProgramSignalHandler();
 
-      kill(getpid(), SIGINT);
+      sys::RedirectedProcess::currentProcess().kill(SIGINT);
       std::this_thread::sleep_for(std::chrono::microseconds(1000));
       return 2;
     }
