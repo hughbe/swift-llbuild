@@ -214,3 +214,9 @@ bool RedirectedProcess::isProcessCancelledStatus(int status) {
   return WIFSIGNALED(status) &&
     (WTERMSIG(status) == SIGINT || WTERMSIG(status) == SIGKILL);
 }
+
+RedirectedProcess RedirectedProcess::currentProcess() {
+  RedirectedProcess process(false);
+  process.innerProcessInfo->processId = getpid();
+  return process;
+}

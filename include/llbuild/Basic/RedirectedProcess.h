@@ -51,6 +51,8 @@ public:
 
   static int sigkill();
   static bool isProcessCancelledStatus(int status);
+
+  static RedirectedProcess currentProcess();
 };
 }
 }
