@@ -3,6 +3,7 @@ set(SOURCES
   C-API.cpp
   Core-C-API.cpp)
 set(DEPENDENCIES
+  llbuildBasic
   llbuildBuildSystem
   llbuildCore
   llbuildBasic
