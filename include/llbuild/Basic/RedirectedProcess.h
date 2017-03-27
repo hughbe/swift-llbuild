@@ -28,16 +28,6 @@ class RedirectedProcess {
 
   /// Sends the specified signal to the process.
   void sendSignal(int signal) const;
-
-  struct Hash {
-    size_t operator()(const llbuild::basic::RedirectedProcess& x) const {
-      return x.processId;
-    }
-  };
-
-  bool operator==(const RedirectedProcess& rhs) const {
-    return processId == rhs.processId;
-  }
 };
 }
 }

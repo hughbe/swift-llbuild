@@ -78,7 +78,7 @@ class LaneBasedExecutionQueue : public BuildExecutionQueue {
   bool shutdown { false };
   
   /// The set of spawned processes to terminate if we get cancelled.
-  std::unordered_set<RedirectedProcess, RedirectedProcess::Hash> spawnedProcesses;
+  std::vector<RedirectedProcess> spawnedProcesses;
   std::mutex spawnedProcessesMutex;
 
   /// Management of cancellation and SIGKILL escalation

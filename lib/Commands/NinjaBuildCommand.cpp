@@ -484,7 +484,7 @@ public:
   struct sigaction previousSigintHandler;
 
   /// The set of spawned processes to cancel when interrupted.
-  std::unordered_set<RedirectedProcess, RedirectedProcess::Hash> spawnedProcesses;
+  std::vector<RedirectedProcess> spawnedProcesses;
   std::mutex spawnedProcessesMutex;
 
   /// Low-level flag for when a SIGINT has been received.
