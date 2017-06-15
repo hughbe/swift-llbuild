@@ -12,10 +12,10 @@
 
 #include "NinjaBuildCommand.h"
 
-#include "InterruptSignalAwaiter.h"
 #include "llbuild/Basic/Compiler.h"
 #include "llbuild/Basic/FileInfo.h"
 #include "llbuild/Basic/Hashing.h"
+#include "llbuild/Basic/InterruptSignalAwaiter.h"
 #include "llbuild/Basic/PlatformUtility.h"
 #include "llbuild/Basic/SerialQueue.h"
 #include "llbuild/Basic/Version.h"
@@ -500,7 +500,7 @@ public:
     // Register the context with the delegate.
     delegate.context = this;
 
-    command::InterruptSignalAwaiter::GlobalAwaiter.setInterruptHandler([&] {
+    InterruptSignalAwaiter::GlobalAwaiter.setInterruptHandler([&] {
       std::lock_guard<std::mutex> guard(spawnedProcessesMutex);
 
       emitNote("cancelling build.");
@@ -527,7 +527,7 @@ public:
     std::string error;
     statusOutput.close(&error);
 
-    command::InterruptSignalAwaiter::GlobalAwaiter.resetInterruptHandler();
+    InterruptSignalAwaiter::GlobalAwaiter.resetInterruptHandler();
   }
 
   /// @name Diagnostics Output

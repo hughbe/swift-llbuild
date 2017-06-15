@@ -2,7 +2,7 @@
 //
 // This source file is part of the Swift.org open source project
 //
-// Copyright (c) 2014 - 2015 Apple Inc. and the Swift project authors
+// Copyright (c) 2017 Apple Inc. and the Swift project authors
 // Licensed under Apache License v2.0 with Runtime Library Exception
 //
 // See http://swift.org/LICENSE.txt for license information
@@ -10,8 +10,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-#ifndef LLBUILD_COMMAND_INTERRUPTSIGNALAWAITER_H
-#define LLBUILD_COMMAND_INTERRUPTSIGNALAWAITER_H
+#ifndef LLBUILD_BASIC_INTERRUPTSIGNALAWAITER_H
+#define LLBUILD_BASIC_INTERRUPTSIGNALAWAITER_H
 
 #include <atomic>
 #include <functional>
@@ -64,4 +64,4 @@ struct InterruptSignalAwaiter {
 }
 }
 
-#endif  // LLBUILD_COMMAND_INTERRUPTSIGNALAWAITER_H
+#endif  // LLBUILD_BASIC_INTERRUPTSIGNALAWAITER_H

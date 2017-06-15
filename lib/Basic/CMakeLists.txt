@@ -3,9 +3,11 @@ add_llbuild_library(llbuildBasic
   FileSystem.cpp
   Hashing.cpp
   PlatformUtility.cpp
+  InterruptSignalAwaiter.cpp
+  RedirectedProcess.cpp
   SerialQueue.cpp
-  Version.cpp
   ShellUtility.cpp
+  Version.cpp
   )
 
 if(${CMAKE_SYSTEM_NAME} MATCHES ".*BSD" OR ${CMAKE_SYSTEM_NAME} MATCHES "Linux")
